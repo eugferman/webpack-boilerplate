@@ -31,6 +31,8 @@
   "devDependencies": {
     "jest": "^25.4.0",
     "jest-webpack": "^0.5.1",
+    "prettier": "^2.0.5",
+    "prettier-webpack-plugin": "^1.2.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0"
