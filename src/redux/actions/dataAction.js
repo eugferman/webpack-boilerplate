@@ -1,5 +1,5 @@
 export const dataAction = (dataName) => ({
-  type: 'LOAD_DATA',
+  type: "LOAD_DATA",
   payload: dataName,
 });
 
