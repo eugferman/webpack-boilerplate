@@ -6,13 +6,13 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devServer: {
-    port: 3000,
+    port: 3000
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -20,23 +20,23 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-        exclude: /node_modules/,
-      },
-    ],
+        exclude: /node_modules/
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.html'
     }),
     new PrettierPlugin({
       printWidth: 80, // Specify the length of line that the printer will wrap on.
@@ -44,7 +44,7 @@ module.exports = {
       useTabs: false, // Indent lines with tabs instead of spaces.
       semi: true, // Print semicolons at the ends of statements.
       encoding: 'utf-8', // Which encoding scheme to use on files
-      extensions: ['.js', '.ts'], // Which file extensions to process
-    }),
-  ],
+      extensions: ['.js', '.ts'] // Which file extensions to process
+    })
+  ]
 };
